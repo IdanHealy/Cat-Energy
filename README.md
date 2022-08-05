@@ -1,6 +1,6 @@
-# Личный проект «{{projectTitle}}»
+# Личный проект <a href="../index.html">CAT ENERGY</a>»
 
-* Студент: [{{userName}}]({{userProfile}}).
+* Студент: [Дмитрий Шаерман](<a href="https://htmlacademy.ru/profile/id2089595"</a>).
 * Наставник: `Неизвестно`.
 
 ---
