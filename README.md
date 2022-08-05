@@ -1,4 +1,4 @@
-# Личный проект <a href="CAT-ENERGY-for-HTMLAcademy/source/index.html">CAT ENERGY</a>»
+# Личный проект <a href="../CAT-ENERGY-for-HTMLAcademy/source/index.html">CAT ENERGY</a>»
 
 * Студент: [Дмитрий Шаерман](<a href="https://htmlacademy.ru/profile/id2089595"</a>).
 * Наставник: `Неизвестно`.
