@@ -1,0 +1,125 @@
+.page-main__aside-catalog {
+  grid-area: page-aside-catalog;
+  height: 964px;
+  width: 320px;
+}
+
+.page-main__aside-catalog h3 {
+  font-family: oswaldmedium;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: left;
+  width: 280px;
+  margin-left: 20px;
+   &::first-letter {
+    text-transform: uppercase;
+  }
+  &::after {
+    content: "";
+    width: 50px;
+    height: 0px;
+    border: 1px solid hsla(97, 53%, 47%, 1);
+    border-left: none;
+    border-right: none;
+    position: absolute;
+    transform: translateY(15px) translateX(15%);
+  }
+}
+
+.additional-cards-list {
+  width: 280px;
+  height: 514px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid hsla(0, 0%, 80%, 1);
+  padding: 0;
+  padding-top: 13px;
+  padding-bottom: 18px;
+  align-self: center;
+  margin: 0 auto 0 auto;
+}
+
+.additional_card {
+  width: 282px;
+  height: 98px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-bottom: 1px solid hsla(0, 0%, 80%, 1);
+  padding-bottom: 19px;
+}
+
+.additional_card__name {
+  width: 280px;
+  height: 16px;
+  margin: 0;
+  font-family: oswaldregular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  text-align: left;
+  text-transform: uppercase;
+
+}
+
+.additional_card__wrapper {
+  width: 280px;
+  height: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.additional_card__wrapper p {
+  margin: 0;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: right;
+
+}
+
+.additional_card button {
+  width: 280px;
+  height: 40px;
+  border: none;
+  background-color: #68b738;
+  font-family: Oswaldregular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #f2f2f2;
+  text-transform: uppercase;
+}
+
+.aside-catalog__gift-info-wrapper p {
+  width: 161px;
+  height: 60px;
+  font-family: Arial;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.aside-catalog__gift-info-wrapper img {
+  padding-top: 55px;
+}
+
+.aside-catalog__gift-info-wrapper {
+  width: 280px;
+  height: 289px;
+  background: url(../../img/gift-photo-mobile-1.png) no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 21px auto auto auto;
+}
