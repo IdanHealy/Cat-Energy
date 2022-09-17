@@ -1,5 +1,6 @@
 .page-header {
   min-width: 320px;
+  width: 767px;
 }
 
 .page-header__logo-and-menu-button-container {
@@ -56,7 +57,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background: url(../../img/header-mobile-banner-background.jpg) no-repeat;
+  background-image:url(../../img/header-mobile-banner-background.jpg), url(../../img/header-mobile-banner-bgcolor.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 50% 0%, 0% 0%;
 }
 
 .page-header__banner h2 {
@@ -95,5 +98,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.page-header__img-can {
+  background: url("../../img/header-mobile-banner-can.png");
+  width: 280px;
+  height: 270px;
 }
