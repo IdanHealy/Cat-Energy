@@ -1,0 +1,115 @@
+.page-header {
+  min-width: 320px;
+  width: 767px;
+}
+.page-header__logo-and-menu-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px;
+  padding-top: 12px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.page-header__h1 {
+  font-family: oswaldmedium;
+  text-transform: uppercase;
+  font-size: 22px;
+  margin: 0;
+}
+.page-header__h1 span {
+  font-family: oswaldregular;
+}
+.page-header__button-for-menu-list {
+  width: 19px;
+  height: 19px;
+  border: none;
+  padding: 0;
+  background: url(../../img/header-mobile-button.svg);
+}
+.page-header__menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page-header__menu-list__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  font-family: oswaldmedium;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #e6e6e6;
+}
+.page-header__banner {
+  display: flex;
+  min-height: 480px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-image: url(../../img/header-mobile-banner-background.jpg), url(../../img/header-mobile-banner-bgcolor.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 50% 0%, 0% 0%;
+}
+.page-header__banner h2 {
+  width: 250px;
+  height: 72px;
+  font-family: Oswaldregular;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #ffffff;
+  text-align: center;
+}
+.page-header__banner p {
+  font-family: Oswaldregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.page-header__banner a {
+  min-width: 192px;
+  min-height: 26px;
+  padding: 7px 44px 7px 44px;
+  font-family: Oswaldregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page-header__img-can {
+  background: url("../../img/header-mobile-banner-can.png");
+  width: 280px;
+  height: 270px;
+}
+.page-body {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+@font-face {
+  font-family: "oswaldmedium";
+  font-style: normal;
+  font-weight: normal;
+  src: local("oswaldmedium"), url(../fnts/oswaldmedium.woff2) format("woff2"), url(../fnts/oswaldregular.woff) format("woff");
+}
+@font-face {
+  font-family: "oswaldregular";
+  font-style: normal;
+  font-weight: bold;
+  src: local("oswaldregular"), url(../fnts/oswaldregular.woff2) format("woff2"), url(../fnts/oswaldregular.woff) format("woff");
+}
+
+/*# sourceMappingURL=style.css.map */
