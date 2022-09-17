@@ -1,5 +1,16 @@
+@only-mobile-width: 320px;
+@tablet-width: 768px;
+@desktop-width: 1440px;
+
+
 .page-body {
   display: flex;
   justify-content: center;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
 }
+
