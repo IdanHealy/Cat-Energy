@@ -3,5 +3,144 @@
   @media (min-width: @only-mobile-width) {
     min-width: 320px;
     max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
+}
+
+.page-main__slider h5 {
+  font-family: Oswaldregular;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+  text-align: left;
+  margin-top: 27px;
+  margin-bottom: 33px;
+  margin-left: 20px;
+}
+
+.page-main__slider p {
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: left;
+  align-self: center;
+  width: 280px;
+  height: 108px;
+  margin: 0px 0px 25px 0px;
+}
+
+.numbers-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0px 20px 0px 20px;
+  justify-content: space-between;
+}
+
+.numbers {
+  width: 123px;
+  height: 55px;
+  border: 1px solid #cdcdcd;
+  border-radius: 5px;
+  font-family: Oswaldregular;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.numbers:nth-of-type(1)::after {
+  position: absolute;
+  content: "снижение веса";
+  width: 80px;
+  height: 19px;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  text-transform: none;
+  z-index: 2;
+  background-color: #f2f2f2;
+  top: 47px;
+}
+
+.numbers:nth-of-type(2)::after {
+  position: absolute;
+  content: "затрачено времени";
+  width: 80px;
+  height: 19px;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  text-align: center;
+  text-transform: none;
+  z-index: 2;
+  background-color: #f2f2f2;
+  top: 47px;
+}
+
+.page-main__slider p:nth-of-type(2) {
+  font-family: Oswaldregular;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  width: 188px;
+  height: 20px;
+  margin-bottom: 42px;
+}
+
+.slider__image {
+  background-image: url(../../img/mobile-big-cat.png);
+  width: 311px;
+  height: 232px;
+  margin-bottom: 23px;
+}
+
+.slider__button {
+  width: 228px;
+  height: 40px;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.slider__button span {
+  width: 49px;
+  height: 30px;
+  font-family: Oswaldregular;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider__button button {
+  width: 84px;
+  height: 14px;
+  border: 1px solid #cdcdcd;
+  margin: 0;
+  padding: 0;
+  border-radius: 10px;
+  background-color: white;
+  background-image: url(../../img/slider-button.svg);
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
 }
