@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <title>Cat Energy</title>
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" type="text">
 </head>
+
 <body class="page-body">
     <header class="page-header">
       <div class="page-wrapper-for-tablet">
         <div class="page-header__logo-and-menu-button-container">
           <div class="page-header__logo"></div>
           <h1 class="page-header__h1">cat<span> energy</span></h1>
-          <button class="page-header__button-for-menu-list"></button>
+          <button class="page-header__button-for-menu-list button-back-1"></button>
         </div>
         <ul class="page-header__menu-list">
           <li class="page-header__menu-list__list-item"><a>главная</a></li>
@@ -27,6 +28,7 @@
           <a>подобрать программу</a>
         </div>
     </header>
+
     <main>
       <div class="programms_info">
         <div class="programm lift">
@@ -43,6 +45,7 @@
           <a href="#">каталог pro</a>
         </div>
       </div>
+
       <div class="info-description">
         <h4>Как это работает</h4>
         <div class="info-description__card">
@@ -64,21 +67,52 @@
           <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
         </div>
       </div>
+
       <div class="page-main__slider">
-        <h5>Живой пример</h5>
-        <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="numbers-container">
-        <div class="numbers">5 кг</div>
-        <div class="numbers">60 дней</div>
-        </div>
-        <p>Затраты на питание: 15 000 РУБ.</p>
-        <div class="slider__image"></div>
-        <div class="slider__button">
-          <span>было</span>
-          <button></button>
-          <span>стало</span>
-        </div>
+          <div class="page-main__preslider-info">
+            <h3 class="preslider-info__header">Живой пример</h3>
+            <p class="preslider-info__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+               Отличный результат без изнуряющих тренировок!
+               При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="efficiency-in-numbers">
+              <div class="numbers-eff"><span class="numbers-eff_main-span">5 кг</span><span class="numbers-eff_span">снижение веса</span></div>
+              <div class="numbers-eff"><span class="numbers-eff_main-span">60 дней</span><span class="numbers-eff_span">затрачено времени</span></div>
+          </div>
+          <div class="numbers-price">Затраты на питание: 15 000 РУБ. </div>
+          </div>
+          <div class="weight-slider">
+            <div class="weight-slider__display"></div>
+            <span class="weight-slider__control">
+              <input type="range">
+            </span>
+          </div>
       </div>
     </main>
+<script>
+
+  const menuButton = document.querySelector(".page-header__button-for-menu-list")
+  const menu = document.querySelector(".page-header__menu-list")
+  const pageBody = document.querySelector(".page-body")
+  const windowQuery = window.matchMedia("(min-width: 767px)");
+
+  menuButton.addEventListener("click", e => {
+    e.preventDefault();
+    menu.classList.contains('hidden-menu') ?
+    menu.classList.remove('hidden-menu') :
+    menu.classList.add('hidden-menu');
+    menuButton.classList.contains('button-back-1') ?
+    menuButton.classList.remove('button-back-1') || menuButton.classList.add('button-back-0'):
+    menuButton.classList.add('button-back-1') || menuButton.classList.remove('button-back-0')
+  });
+
+  menuHidden = windowQuery => {
+    windowQuery.matches || menu.classList.contains('hidden-menu') ?
+    menu.classList.remove('hidden-menu') || menuButton.classList.add('button-back-1')
+    : none
+  };
+
+  windowQuery.addListener(menuHidden);
+
+</script>
 </body>
 </html>

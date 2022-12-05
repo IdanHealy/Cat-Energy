@@ -111,8 +111,8 @@
   height: 19px;
   border: none;
   padding: 0;
-  background: url(../../img/header-mobile-button.svg);
   margin-right: 22px;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -168,6 +168,7 @@
   text-transform: uppercase;
   border-bottom: 1px solid #e6e6e6;
   z-index: 2;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     border: none;
@@ -332,4 +333,16 @@
     height: 499px;
     grid-area: 2/2/1/1;
   }
+}
+
+.hidden-menu {
+  display: none;
+}
+
+.button-back-0 {
+  background: url(../../img/heder-mobile-button-openList.svg);
+}
+
+.button-back-1 {
+  background: url(../../img/header-mobile-button.svg);
 }
