@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Cat Energy</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="style.css"
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="page-body">
     <header class="page-header">
-      <div class="page-header__menu">
+      <div class="page-wrapper-for-tablet">
         <div class="page-header__logo-and-menu-button-container">
-          <img class="page-header__logo" width="33" height="38" alt="логотип кэтэнерджи" src="img/header-mobile-logo.svg">
+          <div class="page-header__logo"></div>
           <h1 class="page-header__h1">cat<span> energy</span></h1>
-          <button class="page-header__button-for-menu-list"></button>
+          <button class="page-header__button-for-menu-list button-back-0"></button>
         </div>
-        <ul class="page-header__menu-list">
-          <li class="page-header__menu-list__list-item"><a>главная</a></li>
-          <li class="page-header__menu-list__list-item"><a>каталог продукций</a></li>
-          <li class="page-header__menu-list__list-item"><a>подбор программы</a></li>
+        <ul class="page-header__menu-list hidden-menu">
+          <li class="page-header__menu-list__list-item"><a href="/" class="item-link">главная</a></li>
+          <li class="page-header__menu-list__list-item"><a href="/catalog.html" class="item-link">каталог продукций</a></li>
+          <li class="page-header__menu-list__list-item"><a href="/form.html" class="item-link">подбор программы</a></li>
         </ul>
+      </div>
         <div class="page-header__banner">
           <h2>Функциональное питание для котов</h2>
           <p>Занялся собой? Займись котом!</p>
@@ -26,5 +27,99 @@
           <a>подобрать программу</a>
         </div>
     </header>
+
+    <main class="page-main">
+      <div class="programms_info">
+        <div class="programm lift">
+          <h3>похудение</h3>
+          <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
+            Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a href="#" class="proggram-link">каталог slim</a>
+        </div>
+        <div class="programm fat">
+          <h3>Набор массы</h3>
+          <p>Заработать авторитет среди дворовых котов и даже собак?
+            Серия Cat Energy Pro поможет вашему коту
+            нарастить необходимые мышцы!</p>
+          <a href="#" class="proggram-link">каталог pro</a>
+        </div>
+      </div>
+
+      <div class="info-description">
+        <h4>Как это работает</h4>
+        <div class="info-description__card">
+          <p>Функциональное питание
+            содержит только полезные
+            питательные вещества.</p>
+        </div>
+        <div class="info-description__card">
+          <p>Выпускается в виде порошка,
+            который нужно лишь залить
+            кипятком и готово.</p>
+        </div>
+        <div class="info-description__card">
+          <p>Замените один-два приема
+            обычной еды на наше
+            функциональное питание.</p>
+        </div>
+        <div class="info-description__card">
+          <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+        </div>
+      </div>
+
+      <div class="page-main__slider">
+          <div class="page-main__preslider-info">
+            <h3 class="preslider-info__header">Живой пример</h3>
+            <p class="preslider-info__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+               Отличный результат без изнуряющих тренировок!
+               При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="efficiency-in-numbers">
+              <div class="numbers-eff"><span class="numbers-eff_main-span">5 кг</span><span class="numbers-eff_span">снижение веса</span></div>
+              <div class="numbers-eff"><span class="numbers-eff_main-span">60 дней</span><span class="numbers-eff_span">затрачено времени</span></div>
+              <div class="numbers-price">Затраты на питание: <span class="numbers-price__span">15 000 РУБ.</span> </div>
+            </div>
+          </div>
+          <div class="main-page__weight-slider">
+          <div class="weight-slider__display">
+            <div class="weight-slider__img before" ></div>
+            <div class="weight-slider__img after"></div>
+          </div>
+          <div class="weight-slider-control">
+              <button class="control-weight-desc button--before">Было</button>
+              <div class="weight-slider-control">
+                  <input type="range" min="0" max="100" value="0" class="range-for-slider">
+              </div>
+              <button class="control-weight-desc button--after">Стало</button>
+            </div>
+            </div>
+          </div>
+          <div class="main-page__adress">
+            <h4>Приглашаем к сотрудничеству дилеров!</h4>
+            <div class="adress-wrapper">
+              <div class="adress"><p>ул. Большая Конюшенная, д.19/8</p></div>
+              <p>Санкт-Петербург</p>
+          </div>
+          </div>
+          <div class="page-main__map">
+          <iframe width="100%" height="100%" style="border: none;"src="https://yandex.ru/map-widget/v1/-/CCUjzVDc0D"></iframe>
+          </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer_wrapper">
+        <h1 class="page-footer__h1">cat<span> &ensp; energy</span></h1>
+        <div class="footer_links">
+          <a href="https://vk.com/htmlacademy" class="vk-link link"></a>
+          <a href="https://" class="instagram-link link"></a>
+          <a href="https://" class="facebook-link link"></a>
+        </div>
+        <div class="HTMLAcademy">
+          <a href="https://htmlacademy.ru/profession/frontender">HTML Academy</a>
+          <img src="./img/HTMLAcademy.svg" width="27px" height="34px">
+        </div>
+      </div>
+    </footer>
+    <script src="./js/mobileMenu.js"></script>
+    <script src="./js/comprasionSlider.js"></script>
 </body>
 </html>
