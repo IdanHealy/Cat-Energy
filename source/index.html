@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Cat Energy</title>
-    
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,12 +12,12 @@
         <div class="page-header__logo-and-menu-button-container">
           <div class="page-header__logo"></div>
           <h1 class="page-header__h1">cat<span> energy</span></h1>
-          <button class="page-header__button-for-menu-list button-back-1"></button>
+          <button class="page-header__button-for-menu-list button-back-0"></button>
         </div>
-        <ul class="page-header__menu-list">
-          <li class="page-header__menu-list__list-item"><a>главная</a></li>
-          <li class="page-header__menu-list__list-item"><a>каталог продукций</a></li>
-          <li class="page-header__menu-list__list-item"><a>подбор программы</a></li>
+        <ul class="page-header__menu-list hidden-menu">
+          <li class="page-header__menu-list__list-item"><a href="/" class="item-link">главная</a></li>
+          <li class="page-header__menu-list__list-item"><a href="/catalog.html" class="item-link">каталог продукций</a></li>
+          <li class="page-header__menu-list__list-item"><a href="/form.html" class="item-link">подбор программы</a></li>
         </ul>
       </div>
         <div class="page-header__banner">
@@ -29,20 +28,20 @@
         </div>
     </header>
 
-    <main>
+    <main class="page-main">
       <div class="programms_info">
         <div class="programm lift">
           <h3>похудение</h3>
           <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a href="#">каталог slim</a>
+          <a href="#" class="proggram-link">каталог slim</a>
         </div>
         <div class="programm fat">
           <h3>Набор массы</h3>
           <p>Заработать авторитет среди дворовых котов и даже собак?
             Серия Cat Energy Pro поможет вашему коту
             нарастить необходимые мышцы!</p>
-          <a href="#">каталог pro</a>
+          <a href="#" class="proggram-link">каталог pro</a>
         </div>
       </div>
 
@@ -77,91 +76,50 @@
             <div class="efficiency-in-numbers">
               <div class="numbers-eff"><span class="numbers-eff_main-span">5 кг</span><span class="numbers-eff_span">снижение веса</span></div>
               <div class="numbers-eff"><span class="numbers-eff_main-span">60 дней</span><span class="numbers-eff_span">затрачено времени</span></div>
-              <div class="numbers-price">Затраты на питание: 15 000 РУБ. </div>
-          </div>
-          </div>
-          <div class="weight-slider">
-            <div class="weight-slider-control">
-            <span class="control-weight-desc">было</span>
-              <input type="range" class="weight-slider_input demo__range" min="0" max="100000" step="100">
-              </input>
-            <span class="control-weight-desc">стало</span>
+              <div class="numbers-price">Затраты на питание: <span class="numbers-price__span">15 000 РУБ.</span> </div>
             </div>
-            </span>
+          </div>
+          <div class="main-page__weight-slider">
+          <div class="weight-slider__display">
+            <div class="weight-slider__img before" ></div>
+            <div class="weight-slider__img after"></div>
+          </div>
+          <div class="weight-slider-control">
+              <button class="control-weight-desc button--before">Было</button>
+              <div class="weight-slider-control">
+                  <input type="range" min="0" max="100" value="0" class="range-for-slider">
+              </div>
+              <button class="control-weight-desc button--after">Стало</button>
+            </div>
+            </div>
+          </div>
+          <div class="main-page__adress">
+            <h4>Приглашаем к сотрудничеству дилеров!</h4>
+            <div class="adress-wrapper">
+              <div class="adress"><p>ул. Большая Конюшенная, д.19/8</p></div>
+              <p>Санкт-Петербург</p>
+          </div>
+          </div>
+          <div class="page-main__map">
+          <iframe width="100%" height="100%" style="border: none;"src="https://yandex.ru/map-widget/v1/-/CCUjzVDc0D"></iframe>
           </div>
       </div>
     </main>
-<script>
-
-(() => {
-  const menuButton = document.querySelector(".page-header__button-for-menu-list")
-  const menu = document.querySelector(".page-header__menu-list")
-  const pageBody = document.querySelector(".page-body")
-  const windowQuery = window.matchMedia("(min-width: 767px)");
-
-  menuButton.addEventListener("click", e => {
-    e.preventDefault();
-    menu.classList.contains('hidden-menu') ?
-    menu.classList.remove('hidden-menu') :
-    menu.classList.add('hidden-menu');
-    menuButton.classList.contains('button-back-1') ?
-    menuButton.classList.remove('button-back-1') || menuButton.classList.add('button-back-0'):
-    menuButton.classList.add('button-back-1') || menuButton.classList.remove('button-back-0')
-  });
-  menuHidden = windowQuery => {
-    windowQuery.matches || menu.classList.contains('hidden-menu') ?
-    menu.classList.remove('hidden-menu') || menuButton.classList.add('button-back-1')
-    : none
-  };
-  windowQuery.addListener(menuHidden);})();
-
-
-  (() => {
-  var progress = document.querySelector('.demo__progress');
-  var docWidth = document.body.clientWidth;
-  var tabletWidth = 768;
-  var imgBefore = progress.querySelector('.demo__illustration--before');
-  var imgAfter = progress.querySelector('.demo__illustration--after');
-  var scale = progress.querySelector('.demo__progress-bar');
-  var range = scale.querySelector('.demo__range');
-  var btnBefore = progress.querySelector('.demo__progress-button--before');
-  var btnAfter = progress.querySelector('.demo__progress-button--after');
-
-  if (progress) {
-
-    btnBefore.addEventListener('click', function () {
-      if (progress.classList.contains('demo__progress--after')) {
-        progress.classList.remove('demo__progress--after');
-      }
-    })
-
-    btnAfter.addEventListener('click', function () {
-      if (!progress.classList.contains('demo__progress--after')) {
-        progress.classList.add('demo__progress--after');
-      }
-    })
-
-    if (docWidth >= tabletWidth) {
-      range.addEventListener('input', function() {
-        imgBefore.style.width = (100 - range.value) + '%';
-        imgAfter.style.width = range.value + '%';
-      })
-
-      btnBefore.addEventListener('click', function () {
-        imgBefore.style.width = '100%';
-        imgAfter.style.width = '0%';
-        range.value = 0;
-      })
-
-      btnAfter.addEventListener('click', function () {
-        imgBefore.style.width = '0%';
-        imgAfter.style.width = '100%';
-        range.value = 100;
-      })
-    }
-  }
-
-})();
-</script>
+    <footer>
+      <div class="footer_wrapper">
+        <h1 class="page-footer__h1">cat<span> energy</span></h1>
+        <div class="footer_links">
+          <a href="https://vk.com/htmlacademy" class="vk-link link"></a>
+          <a href="https://" class="instagram-link link"></a>
+          <a href="https://" class="facebook-link link"></a>
+        </div>
+        <div class="HTMLAcademy">
+          <a href="https://htmlacademy.ru/profession/frontender">HTML Academy</a>
+          <img src="./img/HTMLAcademy.svg" width="27px" height="34px">
+        </div>
+      </div>
+    </footer>
+    <script src="./js/mobileMenu.js"></script>
+    <script src="./js/comprasionSlider.js"></script>
 </body>
 </html>
