@@ -585,7 +585,7 @@ html {
   font-family: "oswaldmedium";
   font-style: normal;
   font-weight: normal;
-  src: local("oswaldmedium"), url(../source/fnts/oswaldmedium.woff2) format("woff2"), url(..source/fnts/oswaldregular.woff) format("woff");
+  src: local("oswaldmedium"), url(./fnts/oswaldmedium.woff2) format("woff2"), url(.fnts/oswaldregular.woff) format("woff");
 }
 @font-face {
   font-family: "oswaldregular";
