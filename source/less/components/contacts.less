@@ -15,6 +15,15 @@
     height: 201px;
     justify-content: space-between;
   }
+
+  @media (min-width: @desktop-width) {
+      width: 570px;
+      height: 201px;
+      position: absolute;
+      left: 110px;
+      top: 2500px;
+      background-color: #ffffff;
+  }
 }
 
 .main-page__adress h4 {
@@ -73,15 +82,20 @@
     flex-direction: column;
     justify-content: flex-start;
   }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    align-items: flex-start;
+  }
 }
 
 .adress {
   width: 140px;
   margin-top: 20px;
-  text-align: right;
+
     @media (min-width: @tablet-width){
     height: 20px;
     margin-bottom: 50px;
     margin-top: 0px;
-}
+  }
 }
