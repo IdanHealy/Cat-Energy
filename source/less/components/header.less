@@ -52,6 +52,8 @@
     border-bottom: 1px solid #e6e6e6;
     min-width: 320px;
     max-width: 767px;
+    color: #000000;
+    text-decoration: none;
   }
 
   @media (min-width: @tablet-width) {
@@ -69,6 +71,14 @@
     height: 59px;
     padding-top: 102px;
   }
+}
+
+.page-header__logo-and-menu-button-container:hover {
+  opacity: 0.8;
+}
+
+.page-header__logo-and-menu-button-container:active {
+  opacity: 0.6;
 }
 
 .page-header__logo {
@@ -191,19 +201,28 @@
     font-weight: 400;
     padding: 0px;
     width: max-content;
-     &:first-child {
+    &:first-child {
       border-bottom: 2px solid #68b738;
+    @media (min-width: @desktop-width) {
+      border-bottom: 2px solid #ffffff
+    }
     }
   }
 
- .item-link {
-    text-decoration: none;
-    color: black;
-    @media (min-width: @desktop-width) {
-      color: white;
-      line-height: 28px;
-    }
   }
+
+.item-link {
+  text-decoration: none;
+  color: #000000;
+
+  @media (min-width: @tablet-width) {
+    line-height: 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    color: white;
+  }
+}
 
   @media (min-width: @desktop-width) {
     font-size: 20px;
@@ -212,7 +231,19 @@
       border-color: #ffffff;
     }
   }
+
+.item-link:hover{
+  @media (min-width: @tablet-width) {
+    opacity: 0.5;
+  }
 }
+
+.item-link:active{
+  @media (min-width: @tablet-width) {
+    opacity: 0.3;
+  }
+}
+
 
 .page-header__banner {
   display: flex;
@@ -317,6 +348,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -335,6 +367,15 @@
     position: inherit;
     align-self: flex-end;
     margin-bottom: 120px;
+  }
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
+
+  &:active {
+    color: rgba(225,225,225, 0.5);
+    user-select: none;
   }
 }
 
