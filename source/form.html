@@ -23,6 +23,41 @@
       </div>
     </header>
     <main>
+
+      <form>
+    <legend><h2>Подбор программы</h2></legend>
+    <fieldset>
+      <legend>Заполните анкету, и мы подберем
+        программу питания для вашего кота</legend>
+        <label>имя:*<input type="name" placeholder="барсик"></label>
+        <label>вес (кг):*<input type="number" placeholder="7"></label>
+        <label>возраст (лет):*<input type="number" placeholder="7"></label>
+    </fieldset>
+    <fieldset>
+      <label><input type="radio">похудение</label>
+      <label><input type="radio">набор массы</label>
+      <label><input type="radio">не знаю (нужен ваш совет)</label>
+    </fieldset>
+    <fieldset>
+      <legend>Контактные данные (владельца кота)</legend>
+      <label>E-mail:*<input type="email" placeholder="kuklachev@gmail.com"></label>
+      <label>Телефон:*<input type="tel" placeholder="8 (960) 900-60-90"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Коментарий</legend>
+      <textarea placeholder="расскажите о повадках кота"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Дополнительно</legend>
+      <label><input type="checkbox" value="сахарозаменитель">сахарозаменитель</label>
+      <label><input type="checkbox" value="питевая вода">питевая вода</label>
+      <label><input type="checkbox" value="молоко">молоко</label>
+      <label><input type="checkbox" value="витамины">витамины</label>
+    </fieldset>
+    <button type="submit">отправить заявку</button>
+    <span>* — Обязательные поля</span>
+  </form>
+
       <div class="page-adress-and-map-wrapper">
       <div class="main-page__adress">
         <h4>Приглашаем к сотрудничеству дилеров!</h4>
@@ -37,7 +72,6 @@
     </div>
   </div>
 </main>
-    </main>
     <footer>
       <div class="footer_wrapper">
         <h1 class="page-footer__h1">cat<span>energy</span></h1>
