@@ -18,47 +18,65 @@
         <ul class="page-header__menu-list hidden-menu">
           <li class="page-header__menu-list__list-item"><a href="index.html" class="item-link-alt">главная</a></li>
           <li class="page-header__menu-list__list-item"><a href="catalog.html" class="item-link-alt">каталог продукций</a></li>
-          <li class="page-header__menu-list__list-item"><a href="" class="item-link-alt active-page-alt">подбор программы</a></li>
+          <li class="page-header__menu-list__list-item"><a href="form.html" class="item-link-alt active-page-alt">подбор программы</a></li>
         </ul>
       </div>
     </header>
-    <main>
-
-      <form>
-    <legend><h2>Подбор программы</h2></legend>
-    <fieldset>
-      <legend>Заполните анкету, и мы подберем
-        программу питания для вашего кота</legend>
-        <label>имя:*<input type="name" placeholder="барсик"></label>
-        <label>вес (кг):*<input type="number" placeholder="7"></label>
-        <label>возраст (лет):*<input type="number" placeholder="7"></label>
+    <main class="page__main">
+      <form class="main__form">
+    <h2 class="form__header">Подбор программы</h2>
+    <p class="form__explanation">Заполните анкету, и мы подберем
+      программу питания для вашего кота</p>
+      <div class="fieldsets-postion-container">
+    <fieldset class="form__fieldsets --border-bottom --desktop-padding">
+        <label class="label-font"><span>имя:*</span><input type="name" placeholder="барсик" class="input-style"></label>
+        <label class="label-font"><span>вес (кг):*</span><input type="number" placeholder="7" class="input-style"></label>
+        <label class="label-font"><span>возраст (лет):</span><input type="number" placeholder="7" class="input-style"></label>
     </fieldset>
-    <fieldset>
-      <label><input type="radio">похудение</label>
-      <label><input type="radio">набор массы</label>
-      <label><input type="radio">не знаю (нужен ваш совет)</label>
+    <fieldset class="form__fieldsets --border-bottom --border-around">
+      <label class="label-font radio-button-label-style"><input type="radio" class="radio-button-style radio-input"><span class="radio-box"></span>похудение</label>
+      <label class="label-font radio-button-label-style"><input type="radio" class="radio-button-style radio-input"><span class="radio-box"></span>набор массы</label>
+      <label class="label-font radio-button-label-style"><input type="radio" class="radio-button-style radio-input"><span class="radio-box"></span>не знаю (нужен ваш совет)</label>
     </fieldset>
-    <fieldset>
-      <legend>Контактные данные (владельца кота)</legend>
-      <label>E-mail:*<input type="email" placeholder="kuklachev@gmail.com"></label>
-      <label>Телефон:*<input type="tel" placeholder="8 (960) 900-60-90"></label>
+    </div>
+    <fieldset class="form__fieldsets --green-border --for-tablet-margin">
+      <legend class="form__legend"><span>Контактные данные (владельца кота)</span></legend>
+      <div class="desktop-wrapper">
+      <label class="label-font">E-mail:*<input type="email" placeholder="kuklachev@gmail.com" class="input-style email-background"></label>
+      <label class="label-font">Телефон:*<input type="tel" placeholder="8 (960) 900-60-90" class="input-style phone-background"></label>
+    </div>
     </fieldset>
-    <fieldset>
-      <legend>Коментарий</legend>
-      <textarea placeholder="расскажите о повадках кота"></textarea>
+    <fieldset class="form__fieldsets --green-border">
+      <legend class="form__legend">Коментарий</legend>
+      <textarea placeholder="расскажите обо всех повадках кота" class="textarea-style"></textarea>
     </fieldset>
-    <fieldset>
-      <legend>Дополнительно</legend>
-      <label><input type="checkbox" value="сахарозаменитель">сахарозаменитель</label>
-      <label><input type="checkbox" value="питевая вода">питевая вода</label>
-      <label><input type="checkbox" value="молоко">молоко</label>
-      <label><input type="checkbox" value="витамины">витамины</label>
+    <fieldset class="form__fieldsets --green-border  --for-tablet-margin">
+      <legend class="form__legend">Дополнительно</legend>
+      <div class="checkbox-wpapper">
+      <label class="label-font --desktop-checkbox-margin"><input type="checkbox" value="сахарозаменитель" class="checkbox-style checkbox-input" disabled>
+        <span class="check_box"></span>
+        сахарозаменитель
+      </label>
+      <label class="label-font --desktop-checkbox-margin"><input type="checkbox" value="питевая вода" class="checkbox-style checkbox-input" checked disabled>
+        <span class="check_box"></span>
+        питевая вода
+      </label>
+      <label class="label-font --desktop-checkbox-margin"><input type="checkbox" value="молоко" class="checkbox-style checkbox-input">
+        <span class="check_box"></span>
+        молоко</label>
+      <label class="label-font --desktop-checkbox-margin"><input type="checkbox" value="витамины" class="checkbox-style checkbox-input">
+        <span class="check_box"></span>
+        витамины
+      </label>
+    </div>
     </fieldset>
-    <button type="submit">отправить заявку</button>
-    <span>* — Обязательные поля</span>
+    <div class="submit-button-wrapper">
+      <button type="submit" class="form__submit-button">отправить заявку</button>
+      <span>* — Обязательные поля</span>
+    </div>
   </form>
 
-      <div class="page-adress-and-map-wrapper">
+      <div class="page-adress-and-map-wrapper --for-form-page-style">
       <div class="main-page__adress">
         <h4>Приглашаем к сотрудничеству дилеров!</h4>
         <div class="adress-wrapper">
@@ -100,4 +118,4 @@
 </body>
 <!--by Dmitry Scheuermann-->
 </html>
-</body>
+

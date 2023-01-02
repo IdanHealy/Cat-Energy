@@ -1,5 +1,6 @@
 .page-header {
   @media (min-width: @only-mobile-width) {
+    min-width: 320px;
     min-width: 100%;
     max-width: 767px;
     margin-bottom: 22px;
@@ -17,11 +18,16 @@
   @media (min-width: @desktop-width) {
     width: inherit;
     margin-bottom: 82px;
+    max-height: 690px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 .page-wrapper-for-tablet-form {
   @media (min-width: @only-mobile-width) {
     width: inherit;
+    align-self: flex-start;
   }
 
 
@@ -30,13 +36,17 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
     padding-right: 140px;
-    padding-left: 93px;
+    padding-left: 110px;
     width: 1440px;
+    max-height: 191px;
+    max-width: 1400px;
     min-width: 1220px;
+    margin-bottom: 0px;
   }
 }
 
@@ -404,6 +414,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
 
   @media (min-width: @tablet-width) {
     position: relative;
@@ -463,8 +474,19 @@
 
 .button-back-0 {
   background: url(../../img/heder-mobile-button-openList.svg);
+  background-repeat: no-repeat;
 }
 
 .button-back-1 {
   background: url(../../img/header-mobile-button.svg);
+  background-repeat: no-repeat;
+}
+
+.--catalog-desktop-style {
+  @media (min-width: @desktop-width) {
+    align-self: center;
+    min-width: 1220px;
+    max-width: 1440px;
+    margin-right: 110px;
+  }
 }
