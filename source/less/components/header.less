@@ -115,6 +115,7 @@
 }
 
 .page-header__logo {
+  background-repeat: no-repeat;
   background: url(../../img/header-mobile-logo.svg);
   width: 33px;
   height: 38px;
@@ -448,12 +449,22 @@
   width: 280px;
   height: 270px;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url(../../img/header-mobile-banner-can@x2.png);
+    background-size: 280px 270px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 709px;
     height: 609px;
     background: url(../../img/header-tablet-banner-can.png) no-repeat;
     position: relative;
     left: -55px;
+
+    @media (min-width: @tablet-width) and (min-resolution: 2dppx) {
+      background: url(../../img/header-tablet-banner-can@x2.png);
+      background-size: 709px 609px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -463,6 +474,11 @@
     grid-area: 2/2/1/1;
     position: relative;
     left: -148px;
+
+    @media (min-width: @desktop-width) and (min-resolution: 2dppx) {
+      background: url(../../img/header-desktop-banner-can@x2.png);
+      background-size: 552px 499px;
+    }
   }
 }
 

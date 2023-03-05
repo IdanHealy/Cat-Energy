@@ -46,7 +46,11 @@
         <div class="catalog-item-wrapper">
           <div class="item-card">
             <div class="card-image-wrapper">
-              <img src="../img/card-images/card-1.png">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="../img/card-images/card-1.png, ../img/card-images/card-1@x2.png 2x">
+                <source media="(min-width: 768px)" srcset="../img/card-images/card-1.png, ../img/card-images/card-1@x2.png 2x">
+                <img src="../img/card-images/card-1-mobile.png" srcset="../img/card-images/card-1-mobile@x2.png x2" alt="Фото упаковки Кэт енерджи про 500 с курицей">
+              </picture>
             </div>
             <div class="card-info-wrapper">
               <div class="card-name">
