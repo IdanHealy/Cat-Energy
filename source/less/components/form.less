@@ -509,6 +509,7 @@ input[type="number"]:focus {
     height: 40px;
     border: 2px solid #cdcdcd;
     right: 40px;
+    margin-bottom: 11px;
   }
 }
 
@@ -529,8 +530,6 @@ input[type="number"]:focus {
   margin: 0;
   border: 0px;
 }
-
-
 
 .check_box {
   width: 30px;
@@ -558,4 +557,10 @@ input[type="number"]:focus {
 
 .checkbox-input:disabled + .check_box {
   opacity: 0.5;
+}
+
+.radio-button-label-style:first-child {
+  @media (min-width: @tablet-width) {
+    margin-top: 25px;
+  }
 }
