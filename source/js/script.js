@@ -47,3 +47,63 @@ let after = document.querySelector('.after');
     })
 
 
+    const map = L.map('map')
+    .setView({
+      lat: 59.938631,
+      lng: 30.323037,
+    }, 13);
+
+  L.tileLayer(
+    'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+    {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> ',
+    },
+  ).addTo(map);
+
+  const points = [
+    {
+      title: 'ул. Большая Конюшенная, д.19/8',
+      lat: 59.938631,
+      lng: 30.323037,
+    },
+  ];
+
+  const createCustomPopup = (point) => {
+    const balloonTemplate = document.querySelector('#balloon').content.querySelector('.balloon');
+    const popupElement = balloonTemplate.cloneNode(true);
+
+    popupElement.querySelector('.balloon__title').textContent = point.title;
+    popupElement.querySelector('.balloon__lat-lng').textContent = `Координаты: ${point.lat}, ${point.lng}`;
+
+    return popupElement;
+  };
+
+  points.forEach((point) => {
+    const {lat, lng} = point;
+
+    const icon = L.icon({
+      iconUrl: 'img/pin.png',
+      iconSize: [113, 106],
+    });
+
+    const marker = L.marker(
+      {
+        lat,
+        lng,
+      },
+      {
+        icon,
+      },
+    );
+
+    marker
+      .addTo(map)
+      .bindPopup(
+        createCustomPopup(point),
+        {
+          keepInView: true,
+        },
+      );
+  });
+
+

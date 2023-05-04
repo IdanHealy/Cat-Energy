@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--by Dmitry Scheuermann-->
 <html lang="ru" class="page">
 <head>
   <head>
@@ -26,6 +25,12 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="icons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
 </head>
 
 <body class="page-body">
@@ -91,17 +96,20 @@
 
       <div class="page-main__slider">
         <div class="slider__center">
+
           <div class="page-main__preslider-info">
             <h3 class="preslider-info__header">Живой пример</h3>
             <p class="preslider-info__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
                Отличный результат без изнуряющих тренировок!
                При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+
             <div class="efficiency-in-numbers">
               <div class="numbers-eff"><span class="numbers-eff_main-span">5 кг</span><span class="numbers-eff_span">снижение веса</span></div>
               <div class="numbers-eff"><span class="numbers-eff_main-span">60 дней</span><span class="numbers-eff_span">затрачено времени</span></div>
               <div class="numbers-price">Затраты на питание: <span class="numbers-price__span">15 000 РУБ.</span> </div>
             </div>
           </div>
+
           <div class="main-page__weight-slider">
           <div class="weight-slider__display">
             <div class="weight-slider__img before" style="width: 100%;"></div>
@@ -115,8 +123,10 @@
               <button class="control-weight-desc button--after">Стало</button>
             </div>
             </div>
+
           </div>
         </div>
+
           <div class="page-adress-and-map-wrapper">
             <div class="main-page__adress">
               <h4>Приглашаем к сотрудничеству дилеров!</h4>
@@ -125,13 +135,16 @@
                 <p>Санкт-Петербург</p>
             </div>
             </div>
-            <div class="page-main__map">
-            <iframe width="100%" height="100%" style="border: none;"src="https://yandex.ru/map-widget/v1/-/CCUjzVDc0D"></iframe>
+            <div class="page-main__map map" id='map'>
+              <template id="balloon">
+                <section class="balloon">
+                  <h3 class="balloon__title">HTML Academy</h3>
+                  <p class="balloon__lat-lng">Координаты: 12.34567, 98.76543</p>
+                </section>
+              </template>
             </div>
           </div>
-        </div>
-        </div>
-      </div>
+
     </main>
     <footer>
       <div class="footer_wrapper">
@@ -160,5 +173,5 @@
     </footer>
     <script src="js/script.min.js"></script>
 </body>
-<!--by Dmitry Scheuermann-->
+<!--Dmitry Scheuermann-->
 </html>
